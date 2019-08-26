@@ -64,3 +64,7 @@ export default class Clock {
     htmlGenerator(timeString, this.el);
   }
 }
+
+let clockElement = document.getElementById("clock");
+console.log(clockElement);
+let clock = new Clock(clockElement);
