@@ -5,7 +5,7 @@ export default class Clock {
     // 1. Create a Date object.
     const currentTime = new Date();
 
-    this.el = el
+    this.el = el;
     // 2. Store the hour, minute, and second.
     this.hours = currentTime.getHours();
     this.minutes = currentTime.getMinutes();

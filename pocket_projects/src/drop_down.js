@@ -54,4 +54,4 @@ list.addEventListener("mouseenter", (e) => {
 });
 list.addEventListener("mouseleave", (e) => {
   handleLeave(e);
-})
+});

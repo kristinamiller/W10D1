@@ -3,6 +3,7 @@ html {
   box-sizing: border-box;
   background: #A9DBB8;
   text-align: center;
+  font-family: sans-serif;
 }
 
 h1 {
@@ -10,6 +11,7 @@ h1 {
   font-family: 'helvetica neue';
   font-size: 20px;
   font-weight: 200;
+  margin: 20px;
 }
 
 .header {
@@ -52,10 +54,49 @@ h1 {
   transform: translateX(0%) scale(1);
 }
 
+.drop-down-dog-nav {
+  background-color: honeydew;
+  border-radius: 10px;
+  width: 250px;
+  margin: auto;
+}
+
+h3 {
+  font-size: 20px;
+  color: forestgreen;
+  padding: 10px;
+  padding-bottom: 5px;
+}
+
 .dog-link.hidden {
   display: none;
 }
 
 .dog-link {
   display: block;
+  padding: 5px;
+}
+
+.dog-link:hover {
+  background-color: forestgreen;
+  color: white;
+}
+
+.dog-link:last-of-type {
+  margin-bottom: 5px;
+}
+
+.drop-down-dog-list {
+  padding-bottom: 5px;
+}
+
+
+.clock-holder {
+  background-color: honeydew;
+  border-radius: 10px;
+  margin: auto;
+  padding: 5px;
+  width: fit-content;
+  font-family: monospace;
+  font-size: 20px;
 }
