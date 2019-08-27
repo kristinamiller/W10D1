@@ -32,3 +32,25 @@ function debounce(func, wait = 20, immediate = true) {
     if (callNow) func.apply(context, args);
   };
 }
+
+let slideAndScroll = document.getElementsByClassName("slide-and-scroll")[0];
+
+let debouncedScroll = debounce(function() {
+  let winTop = window.visualViewport.pageTop;
+  let winHeight = window.visualViewport.height;
+  let winBottom = winTop+winHeight;
+  let images = Array.from(document.getElementsByClassName("slide"));
+  images.forEach((image) => {
+    let imgMidCoords = image.height/2 + image.y;
+    let imgBottomCoords = image.height+image.y;
+    if (imgMidCoords < winBottom && imgMidCoords > winTop) {
+      image.classList.add("active");
+    } else if (imgBottomCoords < winHeight || image.y > winBottom){
+      image.classList.remove("active");
+    }
+  });
+}, 250);
+
+window.addEventListener("scroll", (e) => {
+  debouncedScroll();
+});
