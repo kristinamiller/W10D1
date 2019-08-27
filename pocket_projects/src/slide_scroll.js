@@ -45,7 +45,7 @@ let debouncedScroll = debounce(function() {
     let imgBottomCoords = image.height+image.y;
     if (imgMidCoords < winBottom && imgMidCoords > winTop) {
       image.classList.add("active");
-    } else if (imgBottomCoords < winHeight || image.y > winBottom){
+    } else if (imgTopCoords < winHeight || image.y > winTop){
       image.classList.remove("active");
     }
   });
